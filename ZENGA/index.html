@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENGÁ</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- Delete after testing -->
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+<style>
+ :root {
+  --swiper-image-ratio: 33.3%; /* ratio 16:9 = 56.25% */
+
+  --swiper-width: 70%;
+  --swiper-inactive-scale: .85; /* makes the other slide smaller */
+  
+  /* responsive settings */
+  --swiper-mobile-width: 90%;
+  --swiper-mobile-inactive-scale: .95;
+}
+
+.containerr {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  .swiper {
+      position: relative;
+      width: 100%;
+      height: calc(var(--swiper-width) * var(--swiper-image-ratio) / 100%);
+      overflow: hidden;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    width: var(--swiper-width);
+    opacity: .5;
+    transform: scale(.84);
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    /* border-radius: 0.4285rem; */
+  }
+  
+  .swiper-backface-hidden .swiper-slide {
+    transform: scale(.84) translateZ(0);
+  }
+          
+  .swiper-slide.swiper-slide-active {  
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+  
+  .swiper-backface-hidden .swiper-slide.swiper-slide-active {
+    transform: scale(1) translateZ(0) !important;
+  }
+  
+  .swiper-image {
+    position: relative;
+    height: 500px !important;
+    width: 100%;
+    padding-top: var(--swiper-image-ratio);
+  }
+      
+  .swiper-image .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #929ec9;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 8px;
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 50%;
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  .swiper-button-next {
+    transform: translate(50%, -50%);
+    right: calc((100% - var(--swiper-width)) / 2);
+  }
+  
+  .swiper-button-prev {
+    transform: translate(-50%, -50%);
+    left: calc((100% - var(--swiper-width)) / 2);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .swiper {
+      height: calc(var(--swiper-mobile-width) * var(--swiper-image-ratio) / 100%);
+    }
+  
+    .swiper-slide {
+      width: var(--swiper-mobile-width);
+      transform: scale(var(--swiper-mobile-inactive-scale));
+    }
+    
+    .swiper-backface-hidden .swiper-slide.swiper-slide {
+      transform: scale(var(--swiper-mobile-inactive-scale)) translateZ(0);
+    }
+  
+    .swiper-button-next {
+      right: calc((100% - var(--swiper-mobile-width)) / 2);
+    }
+  
+    .swiper-button-prev {
+      left: calc((100% - var(--swiper-mobile-width)) / 2);
+    }
+  }
+  
+</style>
+
+  </head>
+<body>
+
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg" style="background:#de2028;">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/ZENGA_BRANCO/H_ZENGA_HORIZONTAL.png" style="height:45px;" alt="" srcset="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <i class="fas fa-bars"></i>
+      </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end d-flex align-items-center">
+              <li class="nav-item active">
+                <a class="nav-link text-uppercase text-white-50" href="iniciar_sessao.html">Iniciar sessão</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-white-50" href="#">Serviços</a>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase text-white-50" href="#">Legislação</a>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase text-white-50" href="#">Notícia</a>
+                    <li class="nav-item">
+                      <a class="nav-link text-uppercase text-white-50" href="#">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                      
+                     <div class="dropstart">
+                      <button class="btn btn-transparent dropdown text-white-50" type="button" id="dropstartMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas text-white-50 fa-globe"></i>
+                      </button>
+                      <ul id="dropd" class="dropdown-menu bg-transparent mt-5" aria-labelledby="dropstartMenuButton" style="">
+                        <!-- <li><h6 class="dropdown-header">Dropdown header</h6></li> -->
+                        <li><a class="dropdown-item text-black-50" href="#">Inglês</a></li>
+                        <li><a class="dropdown-item text-black-50" href="#">Português</a></li>
+                        <li><a class="dropdown-item text-black-50" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                    </li>
+
+                    <li>
+                      <div>
+                        <ul class="navbar-nav d-flex gap-2 ms-md-3 flex-row">
+                          <li class="nav-item"><a href=""><i class="fab fa-facebook-f text-white"></i></a></li>
+                          <li class="nav-item"><a href=""><i class="fab fa-instagram text-white"></i></a></li>
+                          <li class="nav-item"><a href=""><i class="fab fa-twitter text-white"></i></a></li>
+                          <li class="nav-item"><a href=""><i class="fab fa-youtube text-white"></i></a></li>
+                        </ul>
+                      </div>
+                    </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<div class="" class="bg-black">
+      <div class="bg-video-wrap">
+        <video src="assets/v.mp4" loop muted autoplay>
+        </video>
+        <div class="overlay">
+        </div>
+     <div id="texthero">
+        <h1 class="display-4 fw-bold text-uppercase" id="">Município do Cazenga</h1>
+        <div class="col-lg-6 mx-auto">
+            <div class="d-sm-flex justify-content-sm-center mb-5">
+              <button type="button" class="btn btnhero  text-uppercase bg-light position-relative btn-lg px-4 w-100 rounded-0">Voltar ao Pul</button>
+              <a href="iniciar_sessao.html" type="button" class="btn btnhero text-decoration-none text-uppercase bg-danger text-white position-relative btn-lg px-4 w-100 rounded-0">Iniciar sessão</a>
+            </div>
+          </div>
+     </div>
+
+      </div>
+</div>
+
+<section class=" bg-black">
+    <div class="container py-5">
+<h2 class="text-white text-uppercase display-6 fw-bold">
+    Zengá é uma plataforma que veio para melhorar a forma de como vendemos os Produtos, bem como a forma de como os publicitamos. Para uma melhor organização, a plataforma vai ajudar o Estado a controlar os estabelecimentos que estão em uma determinada área ou cidade, a m de prover uma melhor estatística dos lugares onde há muita compra e venda no mercado angolano. A partir de casa, poderás acessar à plataforma e fazer tuas subscrições e controlá-la (e controlar a mesma).
+
+</h2>
+    </div>
+</section>
+
+<section class="bg-light">
+ <div class="pt-5">
+    <div class="pt-5 mt-5 container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h1 class="display-5 text-uppercase">Estabelecimentos</h1>
+                <p class="lead pt-4">Todos os estabelecimentos devem estar cadastrados no sistema, deste modo poderão usufruir de um bom negócio e assim estar de acordo com a lei. Cada estabelecimento, após ser cadastrado, possuirá um código QR com o qual se poderá identificar.</p>        
+            </div>
+            <div class="col-lg-5">
+            <img src="assets/01.png" id="img1" style="height:620px;" alt="">
+            </div>
+        </div>
+    </div>
+ </div>
+</section>
+
+<section class="py-5 bg-black">
+    <div class="py-5">
+    <div class="py-5 mt-5 container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h1 class="display-4 pbc text-uppercase text-white">Publicidade</h1>
+                <p class="lead pt-4 text-light">Todos os estabelecimentos que necessitarem de emitir uma publicidade ou divulgar os produtos deverão pagar pela publicidade o valor de 100 Akz, de acordo com a modalidade de pagamento escolhida pelo estabelecimento, o que poderá evitar dispersões e poluições visuais. As publicidades serão cobradas de acordo com o seu tamanho.</p>        
+            </div>
+        </div>
+     </div>
+    </div>
+</section>
+
+<section class="bg-light">
+    <div class="pt-5">
+    <div class="pt-5 mt-5 container">
+        <div class="row">
+
+            <div class="col-lg-6">
+                <h1 class="display-5 text-uppercase">Multas</h1>
+                <p class="lead pt-4">Todos os estabelecimentos que não pagarem as suas dívidas ser-lhes-ão aplicadas uma multa, que por efeito, aumentarão de acordo com os dias. Melhor é pagares para não gerar mais despesas.</p>        
+            </div> 
+                <div class="col-lg-6">
+                    <img src="assets/3.png" id="img3" style="height:620px;" alt="">
+               </div>
+        </div>
+     </div>
+    </div>
+</section>
+
+
+<section class="py-5 bg-black">
+    <div class="py-5">
+    <div class="py-5 mt-5 container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-4 pbc text-uppercase text-white">Publicidade</h1>
+                <p class="lead pt-4 text-light">Todos os estabelecimentos que necessitarem de emitir uma publicidade ou divulgar os produtos deverão pagar pela publicidade o valor de 100 Akz, de acordo com a modalidade de pagamento escolhida pelo estabelecimento, o que poderá evitar dispersões e poluições visuais. As publicidades serão cobradas de acordo com o seu tamanho.</p>        
+            </div>
+            <div class="col-md-5">
+             <div class="d-flex justify-content-end align-items-end h-100 flex-column">
+               <div class="mb-3 text-white text-end">
+                <p class="m-0 p-0 lead fs-6">Tala Hady - Cazenga</p>
+                <p class="m-0 p-0 lead fs-6">Fotógrafo Ivan Café Lopes</p>
+               </div>
+                <button type="button" class="btn w-50 text-uppercase bg-danger text-white btn-lg px-4 text-uppercase rounded-pill">Confira</button>
+             </div>
+              </div>
+        </div>
+     </div>
+    </div>
+</section>
+
+
+<section class="bg-light">
+    <div class="">
+    <div class=" container">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <img src="assets/Q28A85166.png" id="Q28" style="height: 900px;" alt="">
+               </div>
+            <div class="col-lg-5">
+                <h1 class="display-4 fw-semibold text-uppercase">Adira  <br>os nossos serviços</h1>
+                <div class="d-sm-flex pt-5 justify-content-sm-center mb-5">
+                    <button type="button" class="btn btnhero  text-uppercase bg-light position-relative btn-lg px-4 w-100 rounded-0">Voltar ao Pul</button>
+                    <a href="iniciar_sessao.html" type="button" class="btn btnhero text-decoration-none text-uppercase bg-danger text-white position-relative btn-lg px-4 w-100 rounded-0">Iniciar sessão</a>
+                  </div>
+             </div>
+        </div>
+     </div>
+    </div>
+</section>
+
+
+<section class="py-5 bg-black">
+    <div class="py-5">
+    <div class="py-5 mt-5 container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-4 pbc text-uppercase text-white">Publicidade</h1>
+                <p class="lead pt-4 fs-3 text-light">Todos os estabelecimentos que necessitarem de emitir uma publicidade ou divulgar os produtos deverão pagar pela publicidade o valor de 100 Akz, de acordo com a modalidade de pagamento escolhida pelo estabelecimento, o que poderá evitar dispersões e poluições visuais. As publicidades serão cobradas de acordo com o seu tamanho.</p>        
+            </div>
+            <div class="col-md-5">
+             <div class="d-flex justify-content-end align-items-end h-100 flex-column">
+               <div class="mb-3 text-white text-end">
+                <p class="m-0 p-0 lead fs-6">Tala Hady - Cazenga</p>
+                <p class="m-0 p-0 lead fs-6">Fotógrafo Ivan Café Lopes</p>
+               </div>
+                <button type="button" class="btn w-50 text-uppercase bg-danger text-white btn-lg px-4 text-uppercase rounded-pill">Confira</button>
+             </div>
+              </div>
+        </div>
+     </div>
+    </div>
+</section>
+
+
+<section class="pt-5 bg-light">
+    <div class="pt-5">
+       <div class="pt-5 mt-5 container">
+           <div class="row">
+               <div class="col-lg-6">
+                   <h1 class="display-5 text-uppercase">Subscrições</h1>
+                   <p class="lead pt-4">As subscrições serão feitas para cada estabelecimento, para tal irão preencher um formulário e assim poderá fazer seus trabalhos de acordo com a subscrição feita. <br> <br>Após a subscrição, deverá efectuar o pagamento para que a sua assinatura seja validada. Só depois disso poderão ter todos os benefícios do sistema.</p>        
+                   <button class="text-uppercase rounded-0 btn btn-dark lead mt-4">Solicitar agora</button>
+                </div>
+
+               <div class="col-lg-6">
+                <img src="assets/04.png" id="img4" style="height:650px; margin-left: -125px;" alt="">
+            </div>
+           </div>    
+       </div>
+    </div>
+</section>
+
+<section class=" py-4">
+    <h1 class="display-5 container text-uppercase">Notícias</h1>
+ 
+      <ul class="container-fluid d-flex justify-content-md-center mx-auto align-items-center flex-column flex-md-row">
+ 
+        <li class="card rounded-0">
+          <div class="img--container">
+            <img src="https://source.unsplash.com/category/buildings" alt="" />
+          </div>
+          <div class="card--text" style="background-color:#694029;">
+            <div class="text--container">
+              <div class="text--header">
+                <h2 class="text--title text-white">INAUGURAÇÃO DA ESTRADA NOVA NO DISTRITO DO KALAWENDA</h2>
+                <p class="text--subtitle text-white-50">VÍDEOS E IMAGENS</p>
+              </div>
+              <div class="text--details">
+                <p class="text--description">As subscrições serão feitas para cada... estabelecimento, para tal irão preencher um formulário e assim poderá fazer seus trabalhos de acordo com a subscrição feita. Após a subscrição, deverá efectuar o pagamento para que a sua assinatura seja validada. Só depois disso poderão ter todos os benefícios do sistema.
+                </p>
+                <a href="" class="text--link">Event Details</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card rounded-0">
+          <div class="img--container">
+            <img src="https://source.unsplash.com/category/buildings" alt="" />
+          </div>
+          <div class="card--text"  style="background-color:#154F5B;">
+            <div class="text--container">
+              <div class="text--header">
+                <h2 class="text--title text-white">ADMINISTRADOR FAZ VISITA DE CONSTATAÇÃO AO MUNICÍPIO</h2>
+                <p class="text--subtitle text-white-50">FOTOGRAFIAS</p>
+              </div>
+              <div class="text--details">
+                <p class="text--description">24 de Setembro foi o dia escolhido por...
+                </p>
+                <a href="" class="text--link">Event Details</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="card rounded-0">
+          <div class="img--container">
+            <img src="https://source.unsplash.com/category/buildings" alt="" />
+          </div>
+          <div class="card--text"  style="background-color:#680E0C;">
+            <div class="text--container">
+              <div class="text--header">
+                <h2 class="text--title text-white">PUL CHEGOU A AO CAZENGA GARANTINDO MAIS OPORTUNIDADES</h2>
+                <p class="text--subtitle text-white-50">IMAGENS E ÁUDIOS</p>
+              </div>
+              <div class="text--details">
+                <p class="text--description">A Plataforma de Licenciamento PUL...
+                </p>
+                <a href="" class="text--link">Event Details</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+</section>
+
+<section class="py-5 d-block flex align-items-center" style="background:#154F5B;">
+    <div class="py-5">
+       <div class="py-5 container">
+          <h1 id="explore" class="display-2 py-4 fw-semibold text-center text-white text-uppercase">Explore</h1>
+       </div>
+    </div>
+</section>
+
+<section>
+  <div class="containerr">
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">  
+          <div class="swiper-image">
+            <div class="image"></div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="swiper-image">
+            <div class="image"></div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="swiper-image">
+            <div class="image"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid mt-1 bg-light">
+  <div class="row">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-6">
+        <div class="bg-black py-5 px-5">
+          <div class="py-5"> 
+           <div class="text-center text-md-start d-flex justify-content-center flex-column align-items-center align-items-lg-start">
+            <img src="" class="bg-light rounded-pill" style="height:100px; width: 100px;" alt="">
+            <h2 class="text--title fw-light mb-0 fs-3 text-white">TOMÁS BICA MUMBUNDO</h2>
+            <p class="lead text-uppercase  m-0 fs-6 text-white-50">Administrador municipal do Cazenga</p>   
+           </div>
+            <div class="d-flex gap-3 flex-column mt-3 flex-md-row align-items-center">
+            <div class="">
+              <button type="button" class="btn fs-6 text-uppercase bg-primary text-white btn-lg px-4 text-uppercase rounded-pill">Fale comigo</button>
+            </div>
+            <div class="">
+             <a href="" class="text-decoration-none text-white fw-light">Saber mais></a>
+            </div>
+          </div>
+          <div>
+            <ul class="navbar-nav d-flex gap-2 flex-row mt-3">
+              <li class="nav-item"><a href=""><i class="fab fa-facebook-f text-white"></i></a></li>
+              <li class="nav-item"><a href=""><i class="fab fa-instagram text-white"></i></a></li>
+              <li class="nav-item"><a href=""><i class="fab fa-twitter text-white"></i></a></li>
+              <li class="nav-item"><a href=""><i class="fab fa-youtube text-white"></i></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-5">
+<div class="container py-4">
+  <div class="d-sm-flex justify-content-sm-center mb-5">
+    <button type="button" class="btn btnhero  text-uppercase bg-light position-relative btn-lg px-4 w-100 rounded-0">Províncias</button>
+    <button type="button" class="btn btnhero  text-uppercase bg-danger text-white position-relative btn-lg px-4 w-100 rounded-0">Municípios</button>
+  </div>
+</div>
+</section>
+
+<footer class="bg-black py-4 py-md-4 d-flex justify-content-center">
+  <ul class="d-flex flex-column flex-md-row navbar-nav gap-3">
+    <li class="text-center text-md-start nav-item text-uppercase"><a class="text-muted text-decoration-none" href="">Copyright <span>&copy;</span> 2022 OCASO Group</a></li>
+    <li class="text-center text-md-start nav-item text-uppercase"><a class="text-muted text-decoration-none" href="">Termos de uso</a></li>
+    <li class="text-center text-md-start nav-item text-uppercase"><a class="text-muted text-decoration-none" href="">Política de privacidade</a></li>
+    <li class="text-center text-md-start nav-item text-uppercase"><a class="text-muted text-decoration-none" href="">Trabalhe connosco</a></li>
+    <li class="text-center text-md-start nav-item text-uppercase"><a class="text-muted text-decoration-none" href="">Call center <span class="text-white">+244 934 613 777</span></a></li>
+  </ul>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+  // import Swiper from " https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  slidesPerView: 'auto',
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: true
+  // },
+  centeredSlides: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+
+</script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="js/all.js"></script>
+</body>
+</html>
